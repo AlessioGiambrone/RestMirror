@@ -2,7 +2,7 @@
 
 A simple app that will show the request headers and body after an HTTP request.
 
-It can also easily put it on [Heroku](www.heroku.com).
+It can also easily put on [Heroku](www.heroku.com).
 
 ## Usage
 
@@ -17,6 +17,20 @@ In response to a request, the app will return a JSON containing
   - an `args` object with the URL parameters
   - a `data` object with the raw post body
   - a `file` object
+
+## Example
+
+```bash
+curl -X PUT --data-binary '{"message": "This is not a pipe"}' http://127.0.0.1:5000/a?b=c
+```
+will result in 
+```json
+{
+   "args": "{\"b\": \"c\"}",
+   "headers": {"Accept": "*/*", "Host": "127.0.0.1:5000", "User-Agent": "curl/7.52.1", "Content-Type": "application/x-www-form-urlencoded", "Content-Length": "33"},
+   "data": "{\"message\": \"This is not a pipe\"}"
+}
+```
 
 ## Development notes
 
