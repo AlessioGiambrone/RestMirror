@@ -1,6 +1,11 @@
 # RestMirror
 
 A simple app that will show the request headers and body after an HTTP request.
+It is useful when it is needed a service -maybe remote- that shows how it is 
+  being called, showing even headers.
+
+It will respond even at subpaths (e.g. `localhost:5000/a/b/c` is equal to
+  `localhost:5000`).
 
 It can also easily put on [Heroku](www.heroku.com).
 
@@ -28,6 +33,7 @@ will result in
 {
    "args": "{\"b\": \"c\"}",
    "headers": {"Accept": "*/*", "Host": "127.0.0.1:5000", "User-Agent": "curl/7.52.1", "Content-Type": "application/x-www-form-urlencoded", "Content-Length": "33"},
+   "files": {},
    "data": "{\"message\": \"This is not a pipe\"}"
 }
 ```
