@@ -7,7 +7,7 @@ It is useful when it is needed a service -maybe remote- that shows how it is
 It will respond even at subpaths (e.g. `localhost:5000/a/b/c` is equal to
   `localhost:5000`).
 
-It can also easily put on [Heroku](www.heroku.com).
+It can also easily put on [Heroku](https://www.heroku.com).
 
 ## Usage
 
